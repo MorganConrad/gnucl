@@ -19,19 +19,19 @@ Brain-dead simple GNU style command line argument parser
 const gnucl = require('gnucl');
 let parsed = gnucl(process.argv, numberToIgnoreDefaultsTo2);
 // or
-let {args, parsed} = gnucl(process.argv);
+let {args, opts} = gnucl(process.argv);
 ...
-parsed.opts = GNU-like options
-parsed.args = remaining arguments
+parsed.opts = a map of the GNU-like options
+parsed.args = an array of remaining arguments
 ```
 
 ### Example
 
 ```js
-$node myProgram filename.txt --foo=bar --specialanother Filename.pdf
+$node myProgram filename.txt --foo=bar --special anotherFilename.pdf
 
 let parsed = gnucl(process.argv);
-parsed.args = ['filename.txt', 'anotherFilename.pdf']]
+parsed.args = ['filename.txt', 'anotherFilename.pdf']
 parsed.opts = { foo:"bar", special:true }
 ```
 
