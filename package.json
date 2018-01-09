@@ -1,0 +1,30 @@
+{
+  "name": "gnucl",
+  "version": "0.1.0",
+  "description": "Brain-dead simple GNU style command line argument parser",
+  "main": "gnucl.js",
+  "scripts": {
+    "test": "nyc --reporter=lcov tape test/test.js",
+    "coverage": "nyc --reporter=text-lcov report | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorganConrad/gnucl.git"
+  },
+  "keywords": [
+    "command line",
+    "option",
+    "arguments"
+  ],
+  "devDependencies": {
+    "nyc": "^11.2.0",
+    "tape": "^4.6",
+    "coveralls": "^3.0"
+  },
+  "author": "Morgan Conrad <flyingspaniel@gmail.com> (http://flyingspaniel.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MorganConrad/gnucl/issues"
+  },
+  "homepage": "https://github.com/MorganConrad/gnucl#readme"
+}
