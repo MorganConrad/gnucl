@@ -1,6 +1,6 @@
 {
   "name": "gnucl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Brain-dead simple GNU style command line argument parser",
   "main": "gnucl.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "tape": "^4.6",
     "coveralls": "^3.0"
   },
+  "files": [],
   "author": "Morgan Conrad <flyingspaniel@gmail.com> (http://flyingspaniel.com/)",
   "license": "MIT",
   "bugs": {
