@@ -37,6 +37,16 @@ parsed.opts = { foo:"bar", special:true }
 
 By default, **gnucl** ignores the first two arguments.  Pass a second argument to change.
 
+### Changelog
 
+#### Changes / Improvements in v0.2.0
 
+1) If an option is **repeated**, it will be added to an **array**.
+2) an option may contain an = on the right side, e.g. --test=a=b
 
+```js
+node myProgram filename.txt --header=X-foo:foo --header=X-bar:bar --test=a=b anotherFilename.pdf'
+let parsed = gnucl(process.argv);
+parsed.args = ['filename.txt', 'anotherFilename.pdf']
+parsed.opts = { test: "a=b", header: ["X-foo:foo", "X-bar:bar"] }
+```
